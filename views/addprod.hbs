@@ -1,0 +1,59 @@
+<div class="page">
+  <div class="section ">
+    <h1 class="title2">
+      Add Product
+    </h1>
+    <div class="content">
+      <form action="/myprods/create" method="POST">
+        <div class="input-group">
+          <div class="input-field">
+            <input
+              type="text"
+              name="title"
+              placeholder="Title"
+            />
+          </div>
+          <div class="input-field">
+            <input type="number" name="price"placeholder="Price" />
+          </div>
+          <div class="input-field">
+            <input type="number" name="count"placeholder="Count" />
+          </div>
+          <div class="input-field">
+            <input type="text" name="img"placeholder="Img Url" />
+          </div>
+          <div class="input-field">
+            <select name="category" >
+              <option>Choose Category...</option>
+              <option value="phone">Phone</option>
+              <option value="notebook">Notebook</option>
+              <option value="phoneac">Phone accessories</option>
+              <option value="pc">PC</option>
+              <option value="computerac">Computer accessories</option>
+              <option value="car">Car</option>
+              <option value="carparts">Car parts</option>
+              <option value="others">Other</option>
+            </select>
+          </div>
+        </div>
+        <h4 class="title-sm">Full Details (status,all details...)</h4>
+        <div class="text-group">
+          <div class="input-field">
+            <textarea
+              type="text"
+              name="details"
+              placeholder="Details"
+            ></textarea>
+          </div>
+        </div>
+        <div class="btn-group">
+          <button type="submit" class="button bg-red btn-shdw">Add</button>
+          <div class="info-form">
+            <p>Нажимая кнопку “Оставить заявку” вы примимаете нашу</p>
+            <a>политику конфиденциальности</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

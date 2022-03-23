@@ -1,0 +1,129 @@
+<div class="navbar-section">
+  <div class="navbar2 navigation">
+    <ul class="container">
+      <li class="navbar__nav_item">
+        <a href="#" class="navbar__nav_item-link active">
+          <span><i class="material-icons">home</i></span>
+          <span>Home</span>
+        </a>
+      </li>
+      <li class="navbar__nav_item">
+        <a href="#" class="navbar__nav_item-link">
+          <span><i class="material-icons">dashboard</i></span>
+          <span>My Products</span>
+        </a>
+      </li>
+      <li class="navbar__nav_item">
+        <a href="#" class="navbar__nav_item-link">
+          <span><i class="material-icons">format_list_numbered</i></span>
+          <span>Orders</span>
+        </a>
+      </li>
+      <li class="navbar__nav_item">
+        <a href="#" class="navbar__nav_item-link">
+          <span><i class="material-icons">recent_actors</i></span>
+          <span>Contacts</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="container">
+    <nav class="navbar1">
+      <div class="navbar">
+        <div class="bars">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <span class="navbar__logo"><a href="/"><img
+              src="/assets/images/logo.png"
+              alt="mannex_logo"
+            /></a></span>
+        <ul class="navbar__navs navigation">
+          {{#if isHome}}
+            <li class="navbar__nav_item">
+              <a href="/" class="navbar__nav_item-link active">Home</a>
+            </li>
+          {{else}}
+            <li class="navbar__nav_item">
+              <a href="/" class="navbar__nav_item-link">Home</a>
+            </li>
+          {{/if}}
+
+          {{#if isMyPods}}
+            <li class="navbar__nav_item">
+              <a href="/myprods" class="navbar__nav_item-link active">My
+                Products</a>
+            </li>
+          {{else}}
+            <li class="navbar__nav_item">
+              <a href="/myprods" class="navbar__nav_item-link">My Products</a>
+            </li>
+          {{/if}}
+
+          {{#if isOrders}}
+            <li class="navbar__nav_item">
+              <a href="/orders" class="navbar__nav_item-link active">Orders</a>
+            </li>
+          {{else}}
+            <li class="navbar__nav_item">
+              <a href="/orders" class="navbar__nav_item-link">Orders</a>
+            </li>
+          {{/if}}
+
+          
+          {{#if isContacts}}
+            <li class="navbar__nav_item">
+            <a href="/contact" class="navbar__nav_item-link active">Contacts</a>
+          </li>
+            </li>
+          {{else}}
+           <li class="navbar__nav_item">
+            <a href="/contact" class="navbar__nav_item-link">Contacts</a>
+          </li>
+          {{/if}}
+
+          
+        </ul>
+
+        <div class="navbar__right">
+          <div class="cart">
+            <a href="/cart" class="cart__link"><i
+                class="material-icons"
+              >shopping_cart</i></a>
+            <span class="cart__badge">
+              +100
+            </span>
+
+          </div>
+          <div class="profile">
+            <button href="/profile">
+              <img
+                src="https://cdn.pixabay.com/photo/2018/08/28/12/41/avatar-3637425_960_720.png"
+                alt="user"
+              />
+            </button>
+            <div class="profile-options">
+              <ul>
+                <li>
+                  <a href="/profile">
+                    <span>Settings</span>
+                    <span><i class="material-icons">settings</i></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/logout">
+                    <span>Logout</span>
+
+                    <span><i class="material-icons">logout</i></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <a class="profile__auth-btn" href="/login">Войти</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>

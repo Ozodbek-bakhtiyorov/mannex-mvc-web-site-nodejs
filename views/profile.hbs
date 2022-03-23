@@ -1,0 +1,95 @@
+<div class="page">
+  <div class="section profile-page" id="profile">
+    <div class="title2">
+      Мои данные
+    </div>
+    <div class="content">
+      <div class="alldata">
+       <div class="img-section">
+          
+          <div class="avatar">
+            <form action="/profile/edit" method="POST" enctype="multipart/form-data">
+            <label for="uploadimg"><i class="material-icons">add_a_photo</i></label>
+          <input type="file" name="avatar" id="uploadimg">
+          <button type="submit">Set</button>
+          </form>
+          <img
+            src="https://cdn.pixabay.com/photo/2018/08/28/12/41/avatar-3637425_960_720.png"
+            alt="avatar"
+          />
+         
+        </div>
+       </div>
+        <table>
+          <tbody>
+            <tr>
+              <th>Вариант регистрации </th>
+              <td>Физическое лицо</td>
+            </tr>
+            <tr>
+              <th>ID пользователя</th>
+              <td>164</td>
+            </tr>
+            <tr>
+              <th>E-mail </th>
+              <td>digitool.info@mail.ru</td>
+            </tr>
+            <tr>
+              <th>Фамилия</th>
+              <td>Мухамед</td>
+            </tr>
+            <tr>
+              <th>Имя</th>
+              <td> Михаил</td>
+            </tr>
+            <tr>
+              <th>Отчество</th>
+              <td> Мухамед</td>
+            </tr>
+            <tr>
+              <th>Группы пользователя </th>
+              <td>Розница</td>
+            </tr>
+            <tr>
+              <th>
+                  <button class="button btn-shdw bg-blue profile-edit">
+                    Изменить
+                  </button>
+                </div>
+              </th>
+            </tr>
+          </tbody>
+
+        </table>
+
+      </div>
+    </div>
+  </div>
+  <div class="edit-form">
+    <form action="/user/edit" method="POST">
+      <div class="input-group">
+        <div class="input-field">
+          <input type="email" name="email" id="email" placeholder="E-mail" />
+        </div>
+        <div class="input-field">
+          <input type="password" name="password" placeholder="Пароль" />
+        </div>
+        <div class="input-field">
+          <input type="password" name="confirm" placeholder="Повтор пароля" />
+        </div>
+        <div class="input-field">
+          <input type="text" name="firstname" placeholder="Имя" />
+        </div>
+        <div class="input-field">
+          <input type="text" name="patronymic" placeholder="Фамилия" />
+        </div>
+        <div class="input-field">
+          <input type="text" name="lastname" placeholder="Отчество" />
+        </div>
+      </div>
+      <div class="btn-group mb-2">
+        <button type="submit" class="bg-blue btn-shdw">Edit</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+<div class="page">
+  <h2 class="title">
+    Корзина
+    <span>Корзина</span>
+  </h2>
+  <h2 class="title2">Итог: 100 000р.</h2>
+  <div class="section cart">
+    <div class="cart-list">
+      <div class="catalog__content_products">
+        {{#if prods}}
+          {{#each prods}}
+            {{! Prod card ========================> }}
+            <div class="prod-card">
+              <a href="#" class="prod-card__img">
+                <img src="{{prodId.img}}" alt="prod" />
+              </a>
+              <h2 class="prod-card__title">
+                {{prodId.title}}
+              </h2>
+              <p class="prod-card_descr">
+                {{prodId.details}}
+              </p>
+              <div class="prod-card__buttons">
+                <span class="price">
+                  {{prodId.price}}p.
+                </span>
+                <div class="qty">
+                  <div class="button-sm bg-red">-</div>
+                  <div class="qty-count">{{count}}</div>
+                  <div class="button-sm bg-blue">+</div>
+                </div>
+                  <button data-id="{{prodId._id}}" class="cart-btn delete remove-btn">
+                    <i class="material-icons">
+                      delete_forever
+                    </i>
+                  </button>
+              </div>
+              <div class="prod-card__buttons">
+                <a href="#" class="read-more">Details</a>
+              </div>
+            </div>
+          {{/each}}
+        {{else}}
+          <h1>Products Not found</h1>
+          <a href="/" class="btn blue darken-4">Contine for shopping</a>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+  <form action="">
+    <div class="btn-group">
+      <button class="bg-red btn-shdw">Оплатить</button>
+    </div>
+  </form>
+</div>

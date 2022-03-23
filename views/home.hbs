@@ -1,0 +1,162 @@
+<div class="page">
+  <section class="home">
+    {{!///////////////// header ///////////////}}
+    <div class="header">
+      <div class="left">
+        <h2 class="left__info">Предлагаем только качественные
+          <span>запчасти</span>
+          для иномарок</h2>
+        <div class="left__buttons">
+          <a href="#" class="button bg-red btn-shdw">Посмотреть каталог</a>
+          <a href="#" class="button">Более 50 товаров</a>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="carousel">
+          <div class="carousel__wrapper">
+            <div class="carousel__wrapper_inner">
+              <div class="carousel-card">
+                <img src="/assets/images/product.png" alt="prod" />
+              </div>
+            </div>
+            <div class="carousel__controller">
+              <div class="buttons">
+                <button class="button-sm"><i
+                    class="material-icons"
+                  >keyboard_arrow_left</i></button>
+                <button class="button-sm"><i
+                    class="material-icons"
+                  >keyboard_arrow_right</i></button>
+              </div>
+            </div>
+            <div class="carousel__counter">
+              <span>01</span>/08
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{!///////////////// header ///////////////}}
+
+    {{!/////////////////// About/////////////////// }}
+    <div class="about section">
+      <h1 class="title">О компании <span>О компании</span></h1>
+      <div class="about__content">
+        <div class="about__content_left">
+          <p class="info">
+            Компания Mannex: продажа запчастей и аксессуаров высокого качества
+            Компания Mannex начала свою деятельность недавно, но уже успела
+            заслужить хорошую репутацию среди покупателей. Количество
+            положительных отзывов в адрес нашей компании от благодарных клиентов
+            растет с каждым днем. В нашем интернет-магазине вы можете купить
+            необходимые запчасти и аксессуары для своего автомобиля по выгодным
+            ценам. Большой ассортимент В каталоге нашего магазина вы найдете
+            автозапчасти для Lexus, Mazda или иных автомобилей. Среди широкого
+            ассортимента
+          </p>
+          <a href="#" class="button bg-red btn-shdw">
+            Читать дальше
+          </a>
+        </div>
+        <div class="about__content_right">
+          <img src="/assets/images/about.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+    {{!/////////////////// About/////////////////// }}
+
+    {{!///////// catalog ///////////}}
+    <div class="catalog section">
+      <h1 class="title">Каталог <span>Каталог</span></h1>
+      <h1 class="title2">Filtering</h1>
+      <div class="catalog__filter">
+        <div class="filter-card">
+          <form action="">
+            <div class="inputs">
+              <div class="input-filed">
+                <label for="tip">Category</label>
+                <select name="category" id="tip">
+                  <option value="summer">Phone</option>
+                </select>
+              </div>
+              <div class="input-filed">
+                <label for="above">Above</label>
+                <input
+                  type="number"
+                  name="above"
+                  id="above"
+                  placeholder="100"
+                />
+              </div>
+              <div class="input-filed">
+                <label for="below">Below</label>
+                <input
+                  type="number"
+                  name="below"
+                  id="below"
+                  placeholder="200"
+                />
+              </div>
+            </div>
+            <button type="submit">Filter</button>
+          </form>
+        </div>
+      </div>
+      <div class="catalog__content">
+        <div class="catalog__content_products">
+          {{#if prods.length}}
+            {{#each prods}}
+              {{! Prod card ========================> }}
+              <div class="prod-card">
+                <a href="#" class="prod-card__img">
+                  <img src="{{img}}" alt="prod" />
+                </a>
+                <h2 class="prod-card__title">
+                  {{title}}
+                </h2>
+                <p class="prod-card_descr">
+                  {{details}}
+                </p>
+                <div class="prod-card__buttons">
+                  <span class="price">
+                    {{price}}$
+                  </span>
+                  <span>
+                    <form class="cart-btn" action="/cart/add" method="POST">
+                      <input type="hidden" value={{_id}} name="_id" />
+                      <button type="submit" >
+                        <i class="material-icons">
+                          shopping_cart
+                        </i>
+                      </button>
+                    </form>
+                  </span>
+
+                </div>
+                <div class="prod-card__buttons">
+                  <a href="#" class="read-more">Details</a>
+                </div>
+              </div>
+              {{! Prod card ========================> }}
+            {{/each}}
+          {{else}}
+            <div class="not_found section">
+              <div class="img_section">
+                <img src="/assets/images/sad.png" alt="sad" />
+                <p>Пока что здесь ничего нет, перейдите в каталог и добавьте
+                  интересующий товар</p>
+              </div>
+              <div class="btns">
+                <a href="#" class="button bg-red btn-shdw">Перейти в каталог</a>
+              </div>
+            </div>
+          {{/if}}
+
+        </div>
+      </div>
+    </div>
+    {{!///////// catalog ///////////}}
+
+  </section>
+</div>
